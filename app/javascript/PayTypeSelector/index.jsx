@@ -5,12 +5,16 @@ import CheckPayType from './CheckPayType';
 import PurchaseOrderPayType from './PurchaseOrderPayType';
 
 class PayTypeSelector extends React.Component {
+    onPayTypeSelected(event) {
+        console.log(event.target.value);
+        this.setState({ selectedPayType: event.target.value });
+
+    }
     constructor(props) {
         super(props);
         this.onPayTypeSelected = this.onPayTypeSelected.bind(this);
         this.state = { selectedPayType: null };
     }
-
 
     render() {
         let PayTypeCustomComponent = NoPayType;
@@ -38,3 +42,5 @@ class PayTypeSelector extends React.Component {
         );
     }
 }
+export default PayTypeSelector
+

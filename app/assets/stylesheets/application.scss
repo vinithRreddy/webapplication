@@ -1,3 +1,20 @@
+/*
+* This is a manifest file that'll be compiled into application.css,
+* which will include all the files listed below.
+*
+* Any CSS and SCSS file within this directory, lib/assets/stylesheets,
+* or any plugin's vendor/assets/stylesheets directory can be
+* referenced here using a relative path.
+*
+* You're free to add application-wide styles to this file and they'll appear
+* at the bottom of the compiled file so the styles you add here take
+* precedence over styles defined in any other CSS/SCSS files in this
+* directory. Styles in this file should be added after the last require_*
+* statement. It is generally better to create a new file per style scope.
+*
+*= require_tree .
+*= require_self
+*/
 body {
   margin: 0;
   padding: 0;
@@ -7,7 +24,7 @@ header.main {
   @media (min-width: 30em) {
     text-align: left; // left align on desktop
   }
-  background: #308819;
+  background: #282;
   margin: 0;
   h1 {
     display: none;
@@ -27,7 +44,7 @@ header.main {
   }
   nav {
     padding-bottom: 1em;
-    background: rgb(35, 71, 24);
+    background: #141;
     text-align: center; // mobile has centered nav
     @media (min-width: 30em) {
       text-align: left; // desktop nav is left-aligned
@@ -46,12 +63,12 @@ header.main {
         text-transform: uppercase;
         letter-spacing: 0.354em;
         a {
-          color: rgba(110, 219, 21, 0.322);
+          color: #bfb;
           text-decoration: none;
         }
         a:hover {
           background: none;
-          color: rgba(79, 179, 33, 0.979);
+          color: white;
         }
       }
     }
@@ -59,19 +76,18 @@ header.main {
   main {
     padding: 0.5em;
   }
+  .notice,
+  #notice {
+    background: #ffb;
+    border-radius: 0.5em;
+    border: solid 0.177em #882;
+    color: #882;
+    font-weight: bold;
+    margin-bottom: 1em;
+    padding: 1em 1.414em;
+    text-align: center;
+  }
 }
-.notice,
-#notice {
-  background: #ffb;
-  border-radius: 0.5em;
-  border: solid 0.177em #882;
-  color: #882;
-  font-weight: bold;
-  margin-bottom: 1em;
-  padding: 1em 1.414em;
-  text-align: center;
-}
-
 #cart {
   article {
     h2 {
